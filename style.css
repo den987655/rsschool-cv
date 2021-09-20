@@ -23,6 +23,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .header__img {
   border-radius: 5%;
@@ -33,12 +34,27 @@ a {
 }
 .content__block {
   border-bottom: 2px solid #fff;
+  
 }
-
+.content__block li {
+  text-transform: none;
+}
+.img__project {
+  width: 40%;
+}
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
 .content__code {
   width: 500px;
 }
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 15px;
 }
 .footer__logo {

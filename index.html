@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="style.css">
   <title>CV</title>
 </head>
@@ -67,35 +70,36 @@
   <div class="content__block">
     <div class="content__code">
   <h2>Code</h2>
-      const cars = ['Мазда', 'Мерседес', 'Форд']
-      for (let car of cars) {
-      console.log(car)
-      }
+  <pre><code class="language-javascript">function createFunctions(n) {
+  let callbacks = [];
 
-      const person = {
-      firstName: 'Denis',
-      lastName: 'Semeonov',
-      year: 1995,
-      languages: ['Ru', 'En'],
-      hasWife: false,
-      greet: function () {
-      console.log('greet')
-      }
-      }
-      console.log(person.hasWife)
+  for (let i = 0; i < n; i++) {
+    callbacks.push(function() {
+      return i;
+    });
+  };
+  
+  return callbacks;
+};
+</code></pre>
+
       </div>
     </div>
           <div class="content__block">
           <h2>Project:</h2>
-          <ul>
-            <li><a href="https://den987655.github.io/distance">distance</a></li>
-            <li><a href="https://den987655.github.io/quiz">quiz</a></li>
-            <li><a href="https://den987655.github.io/foods">foods</a></li>
-            <li><a href="https://htmlacademy.ru/profile/id1115339">html academy</a></li>
+          <ul class="project">
+            
+            <li><a href="https://den987655.github.io/distance" target="_blank"><img class="img__project" src="img/project1.png" alt="img__project"></a></li>
+            <li><a href="https://den987655.github.io/quiz" target="_blank"><img class="img__project" src="img/project2.png" alt="img__project"></a></li>
+            <li><a href="https://den987655.github.io/foods" target="_blank"><img class="img__project" src="img/project3.png" alt="img__project"></a></li>
+            <li><a href="https://htmlacademy.ru/profile/id1115339" target="_blank"><img class="img__project" src="img/project4.png" alt="img__project"></a></li>
           </ul>
+          </div>
           <div class="content__block">
             <h2>English:</h2>
             <p>elementary</p> 
+            <iframe width="500" height="300" src="https://www.youtube.com/watch?v=7Zi3g6q63c0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="content__block">
             <h2>Education:</h2>
@@ -109,6 +113,7 @@
     <a href="https://rs.school/index.html">
     <img class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="rss logo">
     </a>
+    ©2021
     <a href="https://github.com/den987655">
       <img class="footer__git" src="http://pngimg.com/uploads/github/github_PNG45.png" alt="rss-logo">
       </a>
