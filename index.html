@@ -98,8 +98,9 @@
           <div class="content__block">
             <h2>English:</h2>
             <p>elementary</p> 
-            <iframe width="500" height="300" src="https://www.youtube.com/watch?v=7Zi3g6q63c0" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7Zi3g6q63c0" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
           <div class="content__block">
             <h2>Education:</h2>
@@ -113,11 +114,26 @@
     <a href="https://rs.school/index.html">
     <img class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="rss logo">
     </a>
-    ©2021
+    <div class="footer__copyrating">©2021</div>
     <a href="https://github.com/den987655">
       <img class="footer__git" src="http://pngimg.com/uploads/github/github_PNG45.png" alt="rss-logo">
       </a>
   </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () { // используем событие загрузки страницы, не включая картинки и прочее
+    let iframes = document.querySelectorAll('.iframeAdaptive');
+    iframes.forEach(function (i) { // перебираем имеющиеся Iframe с присвоенным нами классом
+      let iframeWidth = i.width; // берём из атрибута width ширину
+      let iframeHeight = i.height; // берём из атрибута height высоту
+      let iframeParent = i.parentNode; // определяем родительский элемент нашего Iframe
+      let parentWidth = parseInt(getComputedStyle(iframeParent)['width']) - parseInt(getComputedStyle(iframeParent)['padding-left']) - parseInt(getComputedStyle(iframeParent)['padding-right']); // берём родительский контейнер и высчитываем нужную нам ширину, без учёта padding, margin и border
+      let iframeProportion = parentWidth / iframeWidth;
+      i.setAttribute('width', parentWidth); // устанавливаем ширину нашим Iframe
+      i.setAttribute('height', iframeHeight * iframeProportion); // устанавливаем высоту нашим Iframe
+    });
+  });
+</script>
 
 </body>
 
