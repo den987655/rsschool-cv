@@ -34,7 +34,6 @@ a {
 }
 .content__block {
   border-bottom: 2px solid #fff;
-  
 }
 .content__block li {
   text-transform: none;
@@ -62,4 +61,29 @@ a {
 }
 .footer__git {
   width: 100px;
+}
+
+@media (max-width: 380px) {
+  .header {
+    padding: 0 85%;
+    margin: 0 auto;
+  }
+  .header__name {
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    padding: 0 40px;
+    
+  }
+  .footer__logo {
+  width: 250px;
+}
+.footer__git {
+  width: 150px;
+}
+.footer__copyrating {
+  margin-left: auto;
+  margin-right: auto;
+}
 }
